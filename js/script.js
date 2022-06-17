@@ -19,3 +19,29 @@ for(let i=0 ; i < email.length; i++){
 }
 console.log(verificated); 
 document.getElementById('verifi-cated').innerHTML=verificated;
+
+
+
+// Esercizio Dadi
+let usercasual= Math.floor((Math.random() * 6) + 1);
+let numberuser= document.getElementById('number-user');
+numberuser.innerHTML = 'Il numero del giocatore è' + usercasual;
+
+let pccasual= Math.floor((Math.random() * 6) + 1);
+let numberpc= document.getElementById('number-pc');
+numberpc.innerHTML = 'Il numero del computer è '+ pccasual;
+
+let generator= document.getElementById('generator-btn');
+
+generator.addEventListener ('click', function(){
+ 
+    let output= document.getElementById('output-ticket');
+    
+    if(usercasual > pccasual){
+    output.innerHTML='il vincitore è il giocatore con il valore '+ usercasual;
+
+ } else {
+    output.innerHTML='il vincitore è il computer con il valore '+ pccasual;
+ }
+   
+})
